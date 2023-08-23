@@ -62,7 +62,7 @@
     transform: translateY(70%);
 }
 .scroll{
-    display: flex;
+    /* display: flex; */
     overflow-x: scroll;
     margin-left: 15px;
 }

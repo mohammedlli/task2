@@ -8,8 +8,12 @@ export default function Date(props) {
         const toggleDiv = () => {
         setIsHidden(!isHidden);
         };
+
+
+
+
         return (
-        <div>
+
 
             <div>
             <div onClick={toggleDiv} className='Container-Date'
@@ -32,6 +36,6 @@ export default function Date(props) {
                 </div>
             </div>
             </div>
-        </div>
+        
         )
     }
