@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import Date from "./Date";
 import {time} from "./data/Time"
 export default function Test(props){
     const [scrollLeft, setScrollLeft] = useState(0);

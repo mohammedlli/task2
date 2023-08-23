@@ -1,11 +1,8 @@
-import { Link, NavLink } from "react-router-dom"
 import {days} from "./data/Days"
 import {time} from "./data/Time"
 import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
-import { Button } from "@mui/material";
-import Test from "./Test";
 export default function TimeOfDate(props){
     const [activeButton, setActiveButton] = useState("Click 1");
     const handleButtonClick = (button) => {
@@ -36,8 +33,6 @@ export default function TimeOfDate(props){
             const {scrollLeft} = e.currentTarget;
             setisScroll(scrollLeft)
             };
-            // const [scrollLeft, setScrollLeft] = useState(0);
-            // const [isscroll , setisScroll] = useState(0);
                 const divr = useRef(null)
             useEffect(() => {
                 setScrollLeft(props.isscroll)

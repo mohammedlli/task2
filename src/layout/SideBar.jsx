@@ -3,15 +3,11 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import logo from "../img/gymmm.png"
 import {links} from "./NavLink"
 import { useContext } from "react";
-import { Menu } from "../Context/MenuContext";
 import { WindowSize } from "../Context/WindowContext";
 export default function SideBar(){
     const windowsize = useContext(WindowSize);
     const size = windowsize.windowSize;
     console.log(size);
-    const menu = useContext(Menu);
-    const isOpen = menu.isOpen;
-    console.log(isOpen);
     return<>
     <div  className={`${size < 1000 ? "sidew":"side"}`} >
         {size <1000 ? "" :<div className="Title-sid">

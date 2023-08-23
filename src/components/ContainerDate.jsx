@@ -1,10 +1,6 @@
 import { useRef, useState } from "react";
 import Date from "./Date";
-import Test from "./Test"
 import TimeOfDate from "./TimeOfDate";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {time} from "./data/Time"
-import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function ContainerDate(){
     const [isDown, setIsDown] = useState(false);
@@ -13,20 +9,20 @@ export default function ContainerDate(){
     const [isscroll , setisScroll] = useState(0);
         const divref = useRef(null)
         const handleMouseDown = (e) => {
-        setIsDown(true);
-        setStartX(e.clientX);
+            setIsDown(true);
+            setStartX(e.clientX);
         };
 
         const handleMouseMove = (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const deltaX = e.clientX - startX;
-        setScrollLeft(scrollLeft - deltaX *3);
-        setStartX(e.clientX);
-        divref.current.scrollLeft=scrollLeft;
+            if (!isDown) return;
+            e.preventDefault();
+            const deltaX = e.clientX - startX;
+            setScrollLeft(scrollLeft - deltaX *3);
+            setStartX(e.clientX);
+            divref.current.scrollLeft=scrollLeft;
         };
         const handleMouseUp = () => {
-        setIsDown(false);
+            setIsDown(false);
         };
         const hanleScroll = (e) => {
             const {scrollLeft} = e.currentTarget;
